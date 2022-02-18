@@ -14,5 +14,5 @@ inputs:
     description: 'SVG file name (optional), default: gitartwork.svg'
     default: 'gitartwork.svg'
 runs:
-  using: 'node16'
+  using: 'node17'
   main: 'dist/index.js'
