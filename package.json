@@ -2,7 +2,7 @@
   "name": "gitartwork",
   "version": "1.0.0",
   "description": "<p align=\"center\"><a href=\"https://github.com/jasineri/gitartwork\">gitartwork on user's contribution graph, make a SVG image of it and finally push it back to your repository</a> </p>",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "prestart" : "npm run format && npm run build",
     "start": "( node dist/index.js )",
