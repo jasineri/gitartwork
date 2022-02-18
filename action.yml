@@ -1,0 +1,16 @@
+name: 'Gitartwork on contribution graph'
+inputs:
+  user_name:
+    description: 'User name'
+    default: 'jasineri'
+    required: true
+  text:
+    description: 'Text on contribution graph'
+    default: 'JASINERI'
+    required: true
+  svg_file_name:
+    description: 'SVG file name (optional), default: gitartwork.svg'
+    default: 'gitartwork.svg'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
