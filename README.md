@@ -7,7 +7,7 @@ An example result:
 
 ## Usage:
 
-### Option #1: Include as a GitHub Action
+### Option #1: Use Gitartwork as a GitHub Action
 Copy the workflow code into a `.github/workflows/gitartwork.yml` file in your action's repository.
 
     name: Gitartwork from a contribution graph
@@ -25,5 +25,5 @@ Copy the workflow code into a `.github/workflows/gitartwork.yml` file in your ac
                text: JASINERI
                svg_file_name: gitartwork.svg
 
-### Option #2: Make locally on your environment
+### Option #2: Make Gitartwork locally on your environment
 Still in progress...
