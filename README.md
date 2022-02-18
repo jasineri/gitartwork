@@ -1,21 +1,21 @@
-# Gitartwork on user's contribution graph
+# gitartwork on user's contribution graph
 
-Gitartwork on user's contribution graph, make a SVG image of it and finally push it back to your repository.
+gitartwork on user's contribution graph, make a SVG image of it and finally push it back to your repository.
 
 An example result:
 [![jasineri/gitartwork](gitartwork.svg)](https://github.com/jasineri/gitartwork)
 
 ## Usage:
 
-### Option #1: Use Gitartwork as a GitHub Action
+### Option #1: Use gitartwork as a GitHub Action
 Copy the workflow code into a `.github/workflows/gitartwork.yml` file in your action's repository.
 
-    name: Gitartwork from a contribution graph
+    name: gitartwork from a contribution graph
     on: [push, pull_request]
     
     jobs:
       build:
-        name: Make Gitartwork SVG
+        name: Make gitartwork SVG
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v2
@@ -25,5 +25,5 @@ Copy the workflow code into a `.github/workflows/gitartwork.yml` file in your ac
                text: JASINERI
                svg_file_name: gitartwork.svg
 
-### Option #2: Make Gitartwork locally on your environment
+### Option #2: Make gitartwork locally on your environment
 Still in progress...
