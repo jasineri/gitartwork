@@ -12,18 +12,16 @@ Copy the workflow code into a `.github/workflows/gitartwork.yml` file in your ac
 
     name: gitartwork from a contribution graph
     on: [push, pull_request]
-    
     jobs:
       build:
         name: Make gitartwork SVG
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v2
-          - uses: partinis/gitpaint@v1
+          - uses: jasineri/gitartwork@v1
             with:
                user_name: jasineri
                text: JASINERI
-               svg_file_name: gitartwork.svg
 
 ### Option #2: Make gitartwork locally on your environment
 Still in progress...
