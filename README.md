@@ -5,8 +5,9 @@ Gitartwork on user's github contribution graph, make a SVG image of it and final
 An example result:
 [![jasineri/gitartwork](gitartwork.svg)](https://github.com/jasineri/gitartwork)
 
-## Change Gitartwork action.yml
-
-The action.yml defines the inputs and output for your action.
-
 ## Usage:
+
+### Option #1: Include as GitHub Action
+
+### Option #2: Make locally on your environment
+Still in progress...
