@@ -1,10 +1,11 @@
 {
   "name": "gitartwork",
   "version": "1.0.0",
-  "description": "<p align=\"center\">   <a href=\"https://github.com/actions/typescript-action/actions\"><img alt=\"typescript-action status\" src=\"https://github.com/actions/typescript-action/workflows/build-test/badge.svg\"></a> </p>",
+  "description": "<p align=\"center\"><a href=\"https://github.com/jasineri/gitartwork\">Gitartwork on user's contribution graph, make a SVG image of it and finally push it back to your repository</a> </p>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart" : "npm run format && npm run build",
+    "start": "( node dist/index.js )",
     "build": "tsc && ncc build lib/main.js",
     "format": "prettier --write **/*.ts"
   },
