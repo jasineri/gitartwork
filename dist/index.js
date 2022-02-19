@@ -103,8 +103,6 @@ const generateSvg = (siteSource, text, svgFileName) => {
                 if ((yLine >> y) & 1) {
                     var htmlInputElement = htmlInputElements[Math.round((53 - text.length * 6) / 2) * 7 + i * 6 * 7 + x * 7 + y];
                     var dataLevel = Math.floor(Math.random() * 4) + 1;
-                    // htmlInputElement
-                    //     .setAttribute("data-level", dataLevel);
                     var className = "c" + classIndex;
                     $(htmlInputElement).attr("class", "o c " + className);
                     styleElement.append("\n@keyframes " +
@@ -222,16 +220,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __nccwpck_require__(2186);
-// const github = require("@actions/github");
 const loadSite_1 = __nccwpck_require__(8155);
 const generateSvg_1 = __nccwpck_require__(6460);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
-        (0, generateSvg_1.generateSvg)(
-        // await loadSite(core.getInput("user_name")),
-        // core.getInput("text"),
-        // core.getInput("svg_file_name")
-        yield (0, loadSite_1.loadSite)("jasineri"), "JASINERI", "gitartwork.svg");
+        (0, generateSvg_1.generateSvg)(yield (0, loadSite_1.loadSite)(core.getInput("user_name")), core.getInput("text"), core.getInput("svg_file_name")
+        // await loadSite("jasineri"),
+        // "JASINERI",
+        // "gitartwork.svg"
+        );
     });
 }
 // Call the run() function and report any errors
