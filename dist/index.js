@@ -224,11 +224,11 @@ const loadSite_1 = __nccwpck_require__(8155);
 const generateSvg_1 = __nccwpck_require__(6460);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
-        (0, generateSvg_1.generateSvg)(
-        // await loadSite(core.getInput("username")),
-        // core.getInput("text"),
-        // core.getInput("svg_file_name")
-        yield (0, loadSite_1.loadSite)("jasineri"), "JASINERI", "gitartwork.svg");
+        (0, generateSvg_1.generateSvg)(yield (0, loadSite_1.loadSite)(core.getInput("username")), core.getInput("text"), core.getInput("svg_file_name")
+        // await loadSite("jasineri"),
+        // "JASINERI",
+        // "gitartwork.svg"
+        );
     });
 }
 // Call the run() function and report any errors
