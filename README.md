@@ -11,7 +11,10 @@ An example result:
 Copy the workflow code into a `.github/workflows/gitartwork.yml` file in your action's repository.
 
     name: gitartwork from a contribution graph
-    on: [push, pull_request]
+    on: 
+      push:
+      schedule:
+        - cron: '* */24 * * *'
     workflow_dispatch:
     jobs:
       build:
