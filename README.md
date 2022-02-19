@@ -12,6 +12,7 @@ Copy the workflow code into a `.github/workflows/gitartwork.yml` file in your ac
 
     name: gitartwork from a contribution graph
     on: [push, pull_request]
+    workflow_dispatch:
     jobs:
       build:
         name: Make gitartwork SVG
