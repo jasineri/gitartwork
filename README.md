@@ -12,6 +12,7 @@ Copy the workflow code into a `.github/workflows/gitartwork.yml` file in your ac
 
     name: gitartwork from a contribution graph
     on: 
+      push:
       schedule:
         - cron: '* */24 * * *'
     workflow_dispatch:
