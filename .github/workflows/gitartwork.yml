@@ -1,5 +1,9 @@
 name: gitartwork from a contribution graph
-on: [push, pull_request]
+on: 
+  push:
+  pull_request:
+  schedule:
+    - cron: '* */24 * * *'
 jobs:
   build:
     name: Make gitartwork SVG
