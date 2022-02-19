@@ -24,7 +24,9 @@ Copy the workflow code into a `.github/workflows/gitartwork.yml` file in your ac
           - uses: actions/checkout@v2
           - uses: jasineri/gitartwork@v1
             with:
+               # Use this username's contribution graph  
                user_name: jasineri
+               # Text on contribution graph 
                text: JASINERI
           - uses: jasineri/simple-push-action@v1
 
