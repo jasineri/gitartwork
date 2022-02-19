@@ -22,6 +22,7 @@ Copy the workflow code into a `.github/workflows/gitartwork.yml` file in your ac
             with:
                user_name: jasineri
                text: JASINERI
+          - uses: jasineri/simple-push-action@v1
 
 ### Option #2: Make gitartwork locally on your environment
 Still in progress...
