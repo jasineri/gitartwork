@@ -102,6 +102,7 @@ const generateSvg = (siteSource, text, svgFileName) => {
         "    }");
     var htmlInputElements = $(".js-calendar-graph-svg rect");
     var classIndex = 0;
+    text = text.substring(0, 8);
     for (let i = 0; i < text.length; i++) {
         for (let x = 0; x < 5; x++) {
             var yLine = pixels[(text.charCodeAt(i) - 32) * 5 + x];
