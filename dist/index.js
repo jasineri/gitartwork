@@ -59,11 +59,17 @@ const generateSvg = (siteSource, text, svgFileName) => {
     ];
     const $ = cheerio_1.default.load(siteSource);
     let svgElement = $(".js-calendar-graph-svg");
+    if (!svgElement.length) {
+        throw new Error("ERROR: Contribution graph not found!");
+    }
     svgElement.attr("xmlns", "http://www.w3.org/2000/svg");
-    svgElement.attr("height", "148");
+    let svgHeight = Math.floor(Number(svgElement.attr("height") || "128") / 8 - 1);
+    svgElement.attr("height", (svgHeight * 8 + 20).toString());
     $(".js-calendar-graph-svg text").remove();
     svgElement.prepend("<style></style>");
-    svgElement.append('<a href="https://github.com/jasineri/gitartwork"><text x="24" y="132" font-size="0.6em" fill="blue">Get your own gitartwork on jasineri/gitartwork</text></a>');
+    svgElement.append('<a href="https://github.com/jasineri/gitartwork"><text x="24" y="' +
+        (svgHeight * 7 + 27).toString() +
+        '" font-size="0.6em" fill="blue">Get your own gitartwork on jasineri/gitartwork</text></a>');
     let styleElement = $(".js-calendar-graph-svg style");
     styleElement.prepend("\n    :root {\n" +
         "        --c0: rgba(27, 31, 35, 0.06);\n" +
