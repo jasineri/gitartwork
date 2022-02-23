@@ -8,8 +8,7 @@ An example result:
 ## Usage:
 
 ### Option #1: Use gitartwork as a GitHub Action
-1. Copy the workflow code into a `.github/workflows/gitartwork.yml` file in your repository.
-
+Copy the workflow code into a `.github/workflows/gitartwork.yml` file in your action's repository.
 
     name: gitartwork from a contribution graph
     on: 
@@ -30,9 +29,6 @@ An example result:
                # Text on contribution graph 
                text: JASINERI
           - uses: jasineri/simple-push-action@v1
-
-2. It will generate `gitartwork.svg` image in your repository, so then you can include it in your README.md like `![gitartwork](gitartwork.svg)`
-3. Have fun :)
 
 ### Option #2: Make gitartwork locally on your environment
 Still in progress...
