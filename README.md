@@ -30,7 +30,7 @@ An example result:
                    text: JASINERI
               - uses: jasineri/simple-push-action@v1
 
-2. It will generate `gitartwork.svg` image in your repository, so then you can include it in your README.md like `![gitartwork](gitartwork.svg)`
+2. A few moments later it will generate `gitartwork.svg` image in your repository, so then you can include it in your README.md like `![gitartwork](gitartwork.svg)`
 3. Have fun :)
 
 ### Option #2: Make gitartwork locally on your environment
