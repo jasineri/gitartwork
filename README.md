@@ -15,7 +15,7 @@ An example result:
           push:
           schedule:
             - cron: '* */24 * * *'
-        workflow_dispatch:
+          workflow_dispatch:
         jobs:
           build:
             name: Make gitartwork SVG
