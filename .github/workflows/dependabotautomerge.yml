@@ -21,10 +21,11 @@ jobs:
           git merge --no-edit --strategy-option=ours main
           git push origin ${{ github.event.client_payload.ReleaseBranchName }}-docs
           sleep 30
+
       - name: Approve pull request by GitHub-Actions bot
         uses: actions/github-script@v2
         with:
-          github-token: ${{secrets.PRAPPROVAL_SECRET}}
+          github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             github.pulls.createReview({
               owner: context.repo.owner,
