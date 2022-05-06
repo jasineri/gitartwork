@@ -7,7 +7,7 @@ jobs:
   worker:
     runs-on: ubuntu-latest
 
-    if: github.actor == 'dependabot[bot]'
+#    if: github.actor == 'dependabot[bot]'
     steps:
       - name: automerge
         uses: actions/github-script@0.2.0
