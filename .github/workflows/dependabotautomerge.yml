@@ -1,8 +1,7 @@
 name: "Dependabot Automerge - Action"
 
 on:
-  repository_dispatch:
-    types: [merge-pr]
+  workflow_dispatch:
 
 jobs:
   Merge_pull_request:
