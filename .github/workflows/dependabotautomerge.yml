@@ -15,9 +15,10 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
+            const pullRequest = context.payload.workflow_run.pull_requests[0]
             github.pulls.createReview({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              pull_number: ${{ github.event.client_payload.PullRequestNumber }},
+              pull_number: pullRequest.number,
               event: "APPROVE"
             });
