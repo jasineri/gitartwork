@@ -8,12 +8,25 @@ jobs:
     name: Merge pull request
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@0.9.0
+      - name: Approve pull request by GitHub-Actions bot
+        uses: actions/github-script@v2
         with:
-          github-token: ${{github.token}}
+          github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            github.pullRequests.merge({
+            github.pulls.createReview({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              pull_number: context.payload.pull_request.number
+              pull_number: ${{ github.event.client_payload.PullRequestNumber }},
+              event: "APPROVE"
+            });
+      - name: Merge pull request for ${{ github.event.client_payload.ReleaseBranchName }}
+        uses: actions/github-script@v2
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.pulls.merge({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: ${{ github.event.client_payload.PullRequestNumber }},
+              merge_method: "squash"
             })
