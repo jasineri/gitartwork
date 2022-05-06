@@ -4,24 +4,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  worker:
+  automerge:
+    name: Merge pull request
     runs-on: ubuntu-latest
-
-#    if: github.actor == 'dependabot[bot]'
+    if: github.base_ref == 'master' && github.actor == 'dependabot[bot]'
     steps:
-      - name: automerge
-        uses: actions/github-script@0.2.0
+      - uses: actions/github-script@0.9.0
         with:
+          github-token: ${{github.token}}
           script: |
-            github.pullRequests.createReview({
-              owner: context.payload.repository.owner.login,
-              repo: context.payload.repository.name,
-              pull_number: context.payload.pull_request.number,
-              event: 'APPROVE'
-            })
             github.pullRequests.merge({
-              owner: context.payload.repository.owner.login,
-              repo: context.payload.repository.name,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
               pull_number: context.payload.pull_request.number
             })
-          github-token: ${{github.token}}
