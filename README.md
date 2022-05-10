@@ -12,10 +12,8 @@ An example result:
 
         name: gitartwork from a contribution graph
         on: 
-          push:
           schedule:
             - cron: '* */24 * * *'
-          workflow_dispatch:
         jobs:
           build:
             name: Make gitartwork SVG
