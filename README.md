@@ -20,7 +20,7 @@ An example result:
             name: Make gitartwork SVG
             runs-on: ubuntu-latest
             steps:
-              - uses: actions/checkout@v2
+              - uses: actions/checkout@v3
               - uses: jasineri/gitartwork@v1
                 with:
                    # Use this username's contribution graph  
