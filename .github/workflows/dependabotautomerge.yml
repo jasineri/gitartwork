@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Approve pull request by GitHub-Actions bot
-        uses: actions/github-script@v2
+        uses: actions/github-script@v6
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
