@@ -1,6 +1,5 @@
 name: gitartwork from a contribution graph
 on: 
-  push:
   workflow_dispatch:
 jobs:
   build:
